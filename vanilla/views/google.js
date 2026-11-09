@@ -152,7 +152,7 @@ export function renderGoogle(data, boot, options = {}) {
     </div>
     ${tableHtml({ rows: data.rows, columns, catalog, currency, level: selectedLevel, sort: state.sort })}
   </section>
-  <p class="panel-sub" style="margin-top:8px">Read-only. AdPulse cannot change budgets, bids, campaigns or conversion actions.</p>`;
+  <p class="panel-sub" style="margin-top:8px">Read-only. Kampa cannot change budgets, bids, campaigns or conversion actions.</p>`;
 }
 
 export function bindGoogle(root, ctx) {
@@ -214,7 +214,7 @@ export function bindGoogle(root, ctx) {
     const data = ctx.getData();
     if (!data) return;
     const columns = selectedMetrics("google", data.catalog, `${q.subtab}:${q.level}`);
-    exportCsv(`adpulse-google-${q.subtab}-${q.level}.csv`, sortRows(data.rows, state.sort), columns, data.catalog, q.level);
+    exportCsv(`kampa-google-${q.subtab}-${q.level}.csv`, sortRows(data.rows, state.sort), columns, data.catalog, q.level);
   });
 
   root.querySelector('[data-action="retry"]')?.addEventListener("click", () => ctx.load());

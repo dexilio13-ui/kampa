@@ -30,7 +30,7 @@ export const DEFAULT_SETTINGS: AppSettings = {
 };
 
 export function settingsFilePath(): string {
-  return process.env.ADPULSE_SETTINGS_FILE || path.join(process.cwd(), "data", "settings.enc.json");
+  return process.env.KAMPA_SETTINGS_FILE || path.join(process.cwd(), "data", "settings.enc.json");
 }
 
 function appSecret(): string {

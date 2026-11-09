@@ -113,7 +113,7 @@ export function renderTikTok(data, boot, options = {}) {
     </div>
   </details>
 
-  <p class="panel-sub" style="margin-top:8px">Read-only. AdPulse cannot create, edit, pause or delete TikTok campaigns.</p>`;
+  <p class="panel-sub" style="margin-top:8px">Read-only. Kampa cannot create, edit, pause or delete TikTok campaigns.</p>`;
 }
 
 function adCard(record) {
@@ -197,7 +197,7 @@ export function bindTikTok(root, ctx) {
     const data = ctx.getData();
     if (!data) return;
     const columns = selectedMetrics("tiktok", data.catalog, q.level);
-    exportCsv(`adpulse-tiktok-${q.level}.csv`, sortRows(data.rows, state.sort), columns, data.catalog, q.level);
+    exportCsv(`kampa-tiktok-${q.level}.csv`, sortRows(data.rows, state.sort), columns, data.catalog, q.level);
   });
 
   const adlib = root.querySelector("[data-adlib]");

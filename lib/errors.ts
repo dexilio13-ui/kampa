@@ -29,7 +29,7 @@ const FRIENDLY: Record<ErrorCode, { message: string; hint: string; retryable: bo
   },
   RATE_LIMIT: {
     message: "The advertising platform asked us to slow down.",
-    hint: "Wait a minute, then press Refresh. AdPulse retries automatically a few times first.",
+    hint: "Wait a minute, then press Refresh. Kampa retries automatically a few times first.",
     retryable: true,
   },
   NOT_FOUND: {
@@ -53,7 +53,7 @@ const FRIENDLY: Record<ErrorCode, { message: string; hint: string; retryable: bo
     retryable: false,
   },
   POLICY: {
-    message: "This request was blocked by AdPulse's read-only safety rules.",
+    message: "This request was blocked by Kampa's read-only safety rules.",
     hint: "Only a fixed list of official read endpoints is allowed. No ad account data can be changed.",
     retryable: false,
   },

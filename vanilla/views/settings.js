@@ -233,13 +233,13 @@ export function renderSettings(boot) {
 
       <section class="settings-section" id="settings-google">
         <h2>Google Ads</h2>
-        <p class="settings-sub">Read-only access through the Google Ads API. The scope requested is <code>https://www.googleapis.com/auth/adwords</code>; AdPulse never calls a mutate endpoint.</p>
+        <p class="settings-sub">Read-only access through the Google Ads API. The scope requested is <code>https://www.googleapis.com/auth/adwords</code>; Kampa never calls a mutate endpoint.</p>
         <form data-settings-form="googleAds">
           <div class="field-grid">
             ${secretField({ label: "Developer token", name: "developerToken", value: g.developerToken, help: "From the Google Ads API Center. Required for every request." })}
             ${secretField({ label: "OAuth client ID", name: "clientId", value: g.clientId, help: "From a Google Cloud OAuth 2.0 client of type “Web application”." })}
             ${secretField({ label: "OAuth client secret", name: "clientSecret", value: g.clientSecret, help: "Stored encrypted and never sent to the browser." })}
-            ${secretField({ label: "Refresh token", name: "refreshToken", value: g.refreshToken, help: "Created with the adwords scope. AdPulse exchanges it for short-lived access tokens on the server." })}
+            ${secretField({ label: "Refresh token", name: "refreshToken", value: g.refreshToken, help: "Created with the adwords scope. Kampa exchanges it for short-lived access tokens on the server." })}
             <div class="field"><label for="googleLogin">Manager account ID (optional)</label><input id="googleLogin" name="loginCustomerId" type="text" value="${escapeHtml(g.loginCustomerId || "")}" placeholder="1234567890"><span class="help">Used as the login-customer-id header when access is through a manager account.</span></div>
             <div class="field"><label for="googleCustomers">Customer IDs</label><input id="googleCustomers" name="customerIds" type="text" value="${escapeHtml((g.customerIds || []).join(", "))}" placeholder="1234567890, 0987654321"><span class="help">Ten-digit IDs, comma separated. Dashes are fine and are removed server-side.</span></div>
           </div>
@@ -263,13 +263,13 @@ export function renderSettings(boot) {
 
       <section class="settings-section" id="settings-meta">
         <h2>Meta</h2>
-        <p class="settings-sub">Marketing API access with <code>ads_read</code>. AdPulse only lists accounts and reads Insights, campaigns, ad sets and ads. No write calls.</p>
+        <p class="settings-sub">Marketing API access with <code>ads_read</code>. Kampa only lists accounts and reads Insights, campaigns, ad sets and ads. No write calls.</p>
         <form data-settings-form="meta">
           <div class="field-grid">
             ${secretField({ label: "Access token", name: "accessToken", value: m.accessToken, help: "A long-lived user or system-user token with ads_read. Avoid short-lived tokens." })}
             ${secretField({ label: "App ID (optional)", name: "appId", value: m.appId, help: "Only needed if you exchange tokens yourself. Reporting works with the access token alone." })}
             ${secretField({ label: "App secret (optional)", name: "appSecret", value: m.appSecret, help: "Used only for appsecret_proof if your app requires it." })}
-            <div class="field"><label for="metaAccounts">Ad account IDs</label><input id="metaAccounts" name="adAccountIds" type="text" value="${escapeHtml((m.adAccountIds || []).join(", "))}" placeholder="act_1234567890"><span class="help">Optional. If empty, AdPulse lists the accounts available to the token.</span></div>
+            <div class="field"><label for="metaAccounts">Ad account IDs</label><input id="metaAccounts" name="adAccountIds" type="text" value="${escapeHtml((m.adAccountIds || []).join(", "))}" placeholder="act_1234567890"><span class="help">Optional. If empty, Kampa lists the accounts available to the token.</span></div>
           </div>
           ${testRow("meta", "Meta")}
           ${guide({

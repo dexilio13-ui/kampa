@@ -139,7 +139,7 @@ export function renderMeta(data, boot, options = {}) {
     </div>
     ${tableHtml({ rows: data.rows, columns, catalog, currency, level: q.level, sort: state.sort })}
   </section>
-  <p class="panel-sub" style="margin-top:8px">Read-only. AdPulse cannot create, edit, pause or delete Meta campaigns.</p>`;
+  <p class="panel-sub" style="margin-top:8px">Read-only. Kampa cannot create, edit, pause or delete Meta campaigns.</p>`;
 }
 
 export function bindMeta(root, ctx) {
@@ -203,7 +203,7 @@ export function bindMeta(root, ctx) {
     const data = ctx.getData();
     if (!data) return;
     const columns = selectedMetrics("meta", data.catalog, `${q.platform}:${q.level}`);
-    exportCsv(`adpulse-meta-${q.platform}-${q.level}.csv`, sortRows(data.rows, state.sort), columns, data.catalog, q.level);
+    exportCsv(`kampa-meta-${q.platform}-${q.level}.csv`, sortRows(data.rows, state.sort), columns, data.catalog, q.level);
   });
 
   root.querySelector('[data-action="retry"]')?.addEventListener("click", () => ctx.load());

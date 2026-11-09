@@ -1,11 +1,11 @@
-# AdPulse build report
+# Kampa build report
 
 **Date:** 2026-11-09  
 **Result:** Demo/read-only dashboard complete and verified. Live provider integrations implemented but not verified against real accounts.
 
 ## Summary
 
-AdPulse is a Next.js 15.5.29 / React 19.3.1 application with a hand-written vanilla ES-module dashboard. It supports Overview, Google Ads, Meta, TikTok, YouTube, and Settings; runs fully in deterministic demo mode; enforces a reviewed read-only allowlist; encrypts server-side settings; and isolates YouTube from advertising data by construction.
+Kampa is a Next.js 15.5.29 / React 19.3.1 application with a hand-written vanilla ES-module dashboard. It supports Overview, Google Ads, Meta, TikTok, YouTube, and Settings; runs fully in deterministic demo mode; enforces a reviewed read-only allowlist; encrypts server-side settings; and isolates YouTube from advertising data by construction.
 
 All requested release checks pass: lint, typecheck, 61 tests, production build, and built-bundle secret scan. Desktop and true 360 px layouts were exercised in headless Chrome, including keyboard navigation, focus tooltips, settings, empty data, and a simulated provider failure.
 

@@ -1,4 +1,4 @@
-const PREF_KEY = "adpulse.prefs.v1";
+const PREF_KEY = "kampa.prefs.v1";
 
 function readPrefs() {
   try {

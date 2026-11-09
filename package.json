@@ -1,8 +1,8 @@
 {
-  "name": "adpulse",
+  "name": "kampa",
   "version": "1.0.0",
   "private": true,
-  "description": "AdPulse - read-only, all-in-one ad metrics dashboard",
+  "description": "Kampa - your ad buddy that never sleeps. Read-only metrics across four ad networks.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

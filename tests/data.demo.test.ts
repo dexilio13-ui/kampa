@@ -5,7 +5,7 @@ import { cacheClear } from "../lib/cache";
 import { getData, getOverview } from "../lib/data";
 
 beforeAll(() => {
-  vi.stubEnv("ADPULSE_SETTINGS_FILE", path.join(os.tmpdir(), `adpulse-test-${Date.now()}`, "missing.json"));
+  vi.stubEnv("KAMPA_SETTINGS_FILE", path.join(os.tmpdir(), `kampa-test-${Date.now()}`, "missing.json"));
   vi.stubEnv("APP_SECRET", "");
   cacheClear();
 });

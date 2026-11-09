@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AdPulse — Read-only ad metrics, one clear signal</title>
-  <meta name="description" content="AdPulse is an all-in-one, read-only dashboard for Google Ads, Meta, TikTok, and YouTube metrics.">
-  <meta property="og:title" content="AdPulse — Read-only ad metrics, one clear signal">
-  <meta property="og:description" content="All-in-one advertising metrics without write access. Google Ads, Meta, TikTok, and YouTube in one dashboard.">
+  <title>Kampa — Your ad buddy that never sleeps</title>
+  <meta name="description" content="Kampa is a read-only dashboard for Google Ads, Meta, TikTok, and YouTube metrics. One workspace, with no credentials in the browser.">
+  <meta property="og:title" content="Kampa — Your ad buddy that never sleeps">
+  <meta property="og:description" content="Your ad buddy that never sleeps. Four ad networks in one read-only dashboard, with credentials kept on the server.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://dexilio13-ui.github.io/adpulse/">
   <meta property="og:image" content="https://dexilio13-ui.github.io/adpulse/assets/overview.png">
@@ -17,9 +17,9 @@
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
-    <a class="brand" href="./" aria-label="AdPulse home">
-      <span class="brand-mark" aria-hidden="true">AP</span>
-      <span>AdPulse</span>
+    <a class="brand" href="./" aria-label="Kampa home">
+      <span class="brand-mark" aria-hidden="true">K</span>
+      <span>Kampa</span>
     </a>
     <nav aria-label="Main navigation">
       <a href="#features">Features</a>
@@ -35,7 +35,8 @@
       <div class="hero-copy">
         <div class="eyebrow"><span class="pulse-dot" aria-hidden="true"></span> Read-only ad intelligence</div>
         <h1>Every ad platform.<br><span>One clear signal.</span></h1>
-        <p class="lede">AdPulse brings Google Ads, Meta, TikTok, and YouTube metrics into one focused dashboard — with no write access, no data mixing, and no secrets in the browser.</p>
+        <p class="tagline" aria-label="Your ad buddy that never sleeps."><span class="tagline-text" aria-hidden="true">Your ad buddy that never sleeps.</span></p>
+        <p class="lede">Kampa brings Google Ads, Meta, TikTok, and YouTube metrics into one focused dashboard — with no write access, no data mixing, and no secrets in the browser.</p>
         <div class="hero-actions">
           <a class="button button-primary" href="https://github.com/dexilio13-ui/adpulse">View the source <span aria-hidden="true">↗</span></a>
           <a class="button button-ghost" href="#preview">See the interface</a>
@@ -53,10 +54,10 @@
         <div class="window">
           <div class="window-bar">
             <span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
-            <span class="window-title">AdPulse · Overview</span>
+            <span class="window-title">Kampa · Overview</span>
             <span class="demo-badge">DEMO DATA</span>
           </div>
-          <img src="./assets/overview.png" width="1424" height="949" alt="AdPulse overview showing demo Google Ads, Meta, and TikTok performance cards">
+          <img src="./assets/overview.png" width="1424" height="949" alt="Kampa overview showing demo Google Ads, Meta, and TikTok performance cards">
         </div>
         <div class="float-card">
           <span class="float-label">Policy boundary</span>
@@ -131,7 +132,7 @@
       <div class="section-heading narrow">
         <div class="eyebrow">Security is the architecture</div>
         <h2>Read-only at the network boundary.</h2>
-        <p>AdPulse does not rely on hiding buttons. Every outbound provider request is checked against an exact host, method, and path allowlist before it is sent.</p>
+        <p>Kampa does not rely on hiding buttons. Every outbound provider request is checked against an exact host, method, and path allowlist before it is sent.</p>
       </div>
       <div class="security-grid">
         <div class="security-item">
@@ -175,7 +176,7 @@
             <figcaption><strong>TikTok</strong> Monochrome performance workspace.</figcaption>
           </figure>
           <figure class="mobile-figure">
-            <img src="./assets/mobile.png" width="360" height="900" alt="AdPulse at 360 pixels wide with tabs arranged in two rows" loading="lazy">
+            <img src="./assets/mobile.png" width="360" height="900" alt="Kampa at 360 pixels wide with tabs arranged in two rows" loading="lazy">
             <figcaption><strong>360 px</strong> A 3×2 tab grid that fits the viewport.</figcaption>
           </figure>
         </div>
@@ -186,7 +187,7 @@
       <div class="quickstart-copy">
         <div class="eyebrow">Run it yourself</div>
         <h2>Demo mode in under a minute.</h2>
-        <p>The full dashboard is a Node.js application. GitHub Pages hosts this static project page; it cannot run the server-side API, OAuth flows, or encrypted settings store.</p>
+        <p>The full dashboard is a Node.js application. On Windows, double-click <code>start.bat</code> to install, configure, and launch it. GitHub Pages hosts this static project page; it cannot run the server-side API, OAuth flows, or encrypted settings store.</p>
         <a class="text-link" href="https://github.com/dexilio13-ui/adpulse#quick-start">Full setup instructions <span aria-hidden="true">→</span></a>
       </div>
       <pre class="code-block" aria-label="Quick start commands"><code><span class="code-muted"># install and configure</span>
@@ -233,14 +234,14 @@ npm run dev
         <span class="eyebrow">Known boundary</span>
         <h2>Honest about live access.</h2>
       </div>
-      <p>Google Ads, Meta, TikTok, and YouTube clients are implemented and policy-tested, but no live test credentials were available during this build. Real provider responses, permissions, API versions, and quota behavior remain unverified. The screenshots on this page are demo data and are labeled as such in the interface.</p>
+      <p>Google Ads, Meta, TikTok, and YouTube clients are implemented and policy-tested, but no live test credentials were available during this build. Real provider responses, permissions, API versions, and quota behavior remain unverified. The screenshots on this page are demo data and are labeled as such in the interface. The implementation was AI-assisted; the product direction, architecture decisions, and verification record are documented in the repository.</p>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="brand">
-      <span class="brand-mark" aria-hidden="true">AP</span>
-      <span>AdPulse</span>
+      <span class="brand-mark" aria-hidden="true">K</span>
+      <span>Kampa</span>
     </div>
     <p>Read-only by design. Built with Next.js and vanilla JavaScript.</p>
     <div class="footer-links">

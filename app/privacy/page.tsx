@@ -1,20 +1,20 @@
 import Link from "next/link";
 
-export const metadata = { title: "Privacy — AdPulse" };
+export const metadata = { title: "Privacy — Kampa" };
 
 export default function PrivacyPage() {
   return (
     <main className="privacy-page">
       <p className="privacy-back">
-        <Link href="/">← Back to AdPulse</Link>
+        <Link href="/">← Back to Kampa</Link>
       </p>
       <h1>Privacy</h1>
       <p>
-        AdPulse is a read-only reporting tool. It reads advertising and YouTube analytics data so the account owner can see it in one
+        Kampa is a read-only reporting tool. It reads advertising and YouTube analytics data so the account owner can see it in one
         place. It never creates, edits, pauses or deletes campaigns, ads or videos.
       </p>
 
-      <h2>What AdPulse accesses</h2>
+      <h2>What Kampa accesses</h2>
       <ul>
         <li>Google Ads: campaigns, ad groups, ads, keywords, products and performance reports for accounts you connect.</li>
         <li>Meta: ad accounts, campaigns, ad sets, ads and Insights reports.</li>
@@ -35,13 +35,13 @@ export default function PrivacyPage() {
 
       <h2>What is not done</h2>
       <p>
-        AdPulse does not sell data, build advertising profiles, estimate revenue or audience size, rank channels, or combine YouTube
+        Kampa does not sell data, build advertising profiles, estimate revenue or audience size, rank channels, or combine YouTube
         data with data from any other source. YouTube channel data is excluded from cross-network totals.
       </p>
 
       <h2>Deleting your data</h2>
       <p>
-        Open Settings and use “Disconnect and delete my YouTube data”. AdPulse revokes the Google token, clears every YouTube cache
+        Open Settings and use “Disconnect and delete my YouTube data”. Kampa revokes the Google token, clears every YouTube cache
         entry and deletes the stored YouTube credentials immediately. The general danger zone deletes all stored settings and cached
         data.
       </p>

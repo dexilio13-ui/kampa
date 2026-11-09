@@ -46,7 +46,7 @@ describe("optional password gate", () => {
     expect(verifySessionToken("1.bad")).toBe(false);
 
     const request = new Request("http://localhost/api/bootstrap", {
-      headers: { cookie: `adpulse_session=${token}` },
+      headers: { cookie: `kampa_session=${token}` },
     });
     expect(isAuthenticated(request)).toBe(true);
   });

@@ -119,3 +119,11 @@
 **Why:** A dashboard that only works with a mouse or only looks correct with animation is incomplete.
 
 **Consequence:** More CSS and event handling, but keyboard and reduced-motion behavior are testable and were browser-checked.
+
+## 16. Browser hardening and CSP
+
+**Decision:** Send `X-Frame-Options: DENY`, `X-Content-Type-Options: nosniff`, `Referrer-Policy: no-referrer`, a restrictive `Permissions-Policy`, and a CSP with `frame-ancestors 'none'`, `base-uri 'self'`, `form-action 'self'`, and `object-src 'none'` from `next.config.ts`.
+
+**Why:** The dashboard handles sensitive reporting data and optional provider credentials. Framing, base-tag injection, form hijacking, plugin content, and MIME sniffing should be closed by policy, not left to page code.
+
+**Consequence:** The CSP intentionally does not restrict script sources because Next.js injects inline bootstrap scripts. The server-rendered app and the static GitHub Pages site are separate targets: the Pages site is a presentation layer and contains no credentials or server APIs.

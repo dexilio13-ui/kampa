@@ -21,7 +21,7 @@ export default function ClientShell() {
         const root = rootRef.current;
         if (root) {
           root.innerHTML =
-            '<div class="fatal"><h1>AdPulse could not start</h1><p>Reload the page. If it still fails, check the server log.</p></div>';
+            '<div class="fatal"><h1>Kampa could not start</h1><p>Reload the page. If it still fails, check the server log.</p></div>';
         }
       });
 

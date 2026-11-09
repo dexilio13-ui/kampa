@@ -3,8 +3,8 @@ import "./globals.css";
 import "../vanilla/themes.css";
 
 export const metadata: Metadata = {
-  title: "AdPulse — read-only ad metrics",
-  description: "One calm dashboard for Google Ads, Meta and TikTok performance. Read-only by design.",
+  title: "Kampa — Your ad buddy that never sleeps",
+  description: "One read-only dashboard for Google Ads, Meta, TikTok, and YouTube metrics. Credentials stay on the server.",
   robots: { index: false, follow: false },
 };
 

@@ -1,7 +1,7 @@
 import { AppError } from "./errors";
 import { safeEqual, signPayload } from "./crypto";
 
-export const SESSION_COOKIE = "adpulse_session";
+export const SESSION_COOKIE = "kampa_session";
 const SESSION_TTL_SECONDS = 60 * 60 * 24 * 7;
 
 export function passwordRequired(): boolean {
@@ -20,7 +20,7 @@ function secret(): string {
 
 export function createSessionToken(now = Date.now()): string {
   const expires = Math.floor(now / 1000) + SESSION_TTL_SECONDS;
-  const payload = `adpulse:${expires}`;
+  const payload = `kampa:${expires}`;
   return `${expires}.${signPayload(payload, secret())}`;
 }
 
@@ -31,7 +31,7 @@ export function verifySessionToken(token: string | undefined | null, now = Date.
   const expires = Number(expiresRaw);
   if (!Number.isFinite(expires) || expires * 1000 < now) return false;
   try {
-    return safeEqual(signature, signPayload(`adpulse:${expires}`, secret()));
+    return safeEqual(signature, signPayload(`kampa:${expires}`, secret()));
   } catch {
     return false;
   }

@@ -33,7 +33,7 @@ export async function POST(request: Request) {
       const next = record && record.resetAt > now ? { count: record.count + 1, resetAt: record.resetAt } : { count: 1, resetAt: now + 60_000 };
       attempts.set(key, next);
       return NextResponse.json(
-        { error: { code: "AUTH", message: "That password did not match.", hint: "Try again, or ask the person who deployed AdPulse.", retryable: false } },
+        { error: { code: "AUTH", message: "That password did not match.", hint: "Try again, or ask the person who deployed Kampa.", retryable: false } },
         { status: 401, headers: NO_STORE },
       );
     }

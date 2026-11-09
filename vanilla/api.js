@@ -20,7 +20,7 @@ async function request(url, options = {}) {
       body: options.body ? JSON.stringify(options.body) : undefined,
     });
   } catch {
-    throw new ApiError({ code: "UNAVAILABLE", message: "The AdPulse server did not answer.", hint: "Check that the server is running, then try again." }, 0);
+    throw new ApiError({ code: "UNAVAILABLE", message: "The Kampa server did not answer.", hint: "Check that the server is running, then try again." }, 0);
   }
 
   let json = null;

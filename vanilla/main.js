@@ -42,8 +42,8 @@ export function mount(root) {
     <a class="skip-link" href="#main">Skip to dashboard</a>
     <header class="topbar" id="topbar">
       <div class="topbar-inner">
-        <a class="brand" href="#overview" aria-label="AdPulse overview">
-          <span class="brand-mark" aria-hidden="true">AP</span><span class="brand-name">AdPulse</span>
+        <a class="brand" href="#overview" aria-label="Kampa overview">
+          <span class="brand-mark" aria-hidden="true">K</span><span class="brand-name">Kampa</span>
         </a>
         <span class="demo-badge" id="demo-badge" hidden>DEMO DATA</span>
         <nav class="tablist" id="tablist" role="tablist" aria-label="Networks and settings"></nav>
@@ -259,7 +259,7 @@ export function mount(root) {
     store.catalogs = boot.catalogs || {};
     if (!booted) {
       booted = true;
-      const hasPrefs = Boolean(localStorage.getItem("adpulse.prefs.v1"));
+      const hasPrefs = Boolean(localStorage.getItem("kampa.prefs.v1"));
       if (!hasPrefs && boot.settings?.defaultRange) store.rangePreset = boot.settings.defaultRange;
     }
     if (!RANGE_OPTIONS.some(([key]) => key === store.rangePreset)) store.rangePreset = "last_7d";
@@ -414,13 +414,14 @@ export function mount(root) {
     login.className = "login-screen";
     login.id = "login-screen";
     login.innerHTML = `<div class="login-card">
-      <div class="eyebrow">AdPulse · private instance</div>
+      <div class="eyebrow">Kampa · private instance</div>
       <h1>Enter the dashboard</h1>
+      <p class="tagline" aria-label="Your ad buddy that never sleeps."><span class="tagline-text" aria-hidden="true">Your ad buddy that never sleeps.</span></p>
       <p>This instance is protected by a password. The password is checked on the server; no data is sent before you sign in.</p>
       <form id="login-form">
         <label class="field"><span>Password</span><input type="password" name="password" autocomplete="current-password" required autofocus></label>
         <p class="login-error" id="login-error" role="alert">${escapeHtml(message)}</p>
-        <button type="submit" class="button-primary">Unlock AdPulse</button>
+        <button type="submit" class="button-primary">Unlock Kampa</button>
       </form>
       <p class="panel-sub" style="margin-top:14px">Read-only reporting. Credentials stay on this server.</p>
     </div>`;
@@ -448,7 +449,7 @@ export function mount(root) {
 
   function renderFatal(error) {
     topbar.hidden = true;
-    view.innerHTML = `<div class="fatal"><h1>AdPulse could not start</h1><p>${escapeHtml(error?.message || "The server did not answer.")}</p><p class="panel-sub">${escapeHtml(error?.hint || "Check the server log and your .env.local file.")}</p></div>`;
+    view.innerHTML = `<div class="fatal"><h1>Kampa could not start</h1><p>${escapeHtml(error?.message || "The server did not answer.")}</p><p class="panel-sub">${escapeHtml(error?.hint || "Check the server log and your .env.local file.")}</p></div>`;
   }
 
   async function init() {

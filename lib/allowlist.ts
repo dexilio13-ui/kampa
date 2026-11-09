@@ -9,7 +9,7 @@ export interface AllowRule {
 }
 
 /**
- * The complete set of third-party endpoints AdPulse may call.
+ * The complete set of third-party endpoints Kampa may call.
  * Every entry is a read or a permitted OAuth/exchange/report job.
  * Anything not matching this list is refused before a socket is opened.
  */

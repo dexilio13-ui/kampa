@@ -1,6 +1,6 @@
 # API notes
 
-Status as of 2026-11-09. This file records exactly what AdPulse calls, how values are normalized, and what remains unverified. It is intentionally conservative: an endpoint or field is only marked verified when this repository proves it locally or a live account has confirmed it.
+Status as of 2026-11-09. This file records exactly what Kampa calls, how values are normalized, and what remains unverified. It is intentionally conservative: an endpoint or field is only marked verified when this repository proves it locally or a live account has confirmed it.
 
 ## Read-only policy
 

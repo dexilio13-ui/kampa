@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="AdPulse">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Kampa">
   <rect width="64" height="64" rx="14" fill="#111315"/>
-  <path d="M16 46 28.5 18h7L48 46h-8l-2.6-6.4H26.4L23.8 46Zm12.4-12.6h7L32 24.2Z" fill="#f7f6f2"/>
-  <circle cx="47" cy="46" r="3.5" fill="#8cf0c0"/>
+  <path d="M17 16h8v11.4L36.8 16h10.1L32.7 31.5 47.8 48h-10L25 33.1V48h-8Z" fill="#f7f6f2"/>
+  <circle cx="49" cy="48" r="3.5" fill="#8cf0c0"/>
 </svg>

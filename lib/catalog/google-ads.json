@@ -1,0 +1,500 @@
+{
+  "network": "google-ads",
+  "label": "Google Ads",
+  "defaultLevel": "campaign",
+  "levels": [
+    { "key": "campaign", "label": "Campaigns", "description": "One row per campaign." },
+    { "key": "ad_group", "label": "Ad groups", "description": "One row per ad group." },
+    { "key": "ad", "label": "Ads", "description": "One row per ad." },
+    { "key": "keyword", "label": "Keywords", "description": "One row per keyword." },
+    { "key": "search_term", "label": "Search terms", "description": "One row per search term that triggered an ad." },
+    { "key": "product", "label": "Products", "description": "One row per product in Shopping campaigns." },
+    { "key": "asset_group", "label": "Asset groups", "description": "One row per Performance Max asset group." }
+  ],
+  "defaultMetrics": ["impressions", "clicks", "cost", "ctr", "average_cpc", "conversions"],
+  "groups": ["Performance", "Conversions", "Impression share", "Video", "Engagement", "Shopping", "Quality"],
+  "metrics": [
+    {
+      "key": "impressions",
+      "label": "Impressions",
+      "description": "How many times your ad appeared on a screen.",
+      "format": "number",
+      "higherIsBetter": true,
+      "levels": ["campaign", "ad_group", "ad", "keyword", "search_term", "product", "asset_group"],
+      "sourceField": "metrics.impressions",
+      "docUrl": "https://developers.google.com/google-ads/api/fields/v26/metrics#metrics.impressions",
+      "group": "Performance"
+    },
+    {
+      "key": "clicks",
+      "label": "Clicks",
+      "description": "How many times people clicked your ad.",
+      "format": "number",
+      "higherIsBetter": true,
+      "levels": ["campaign", "ad_group", "ad", "keyword", "search_term", "product", "asset_group"],
+      "sourceField": "metrics.clicks",
+      "docUrl": "https://developers.google.com/google-ads/api/fields/v26/metrics#metrics.clicks",
+      "group": "Performance"
+    },
+    {
+      "key": "cost",
+      "label": "Cost",
+      "description": "How much you spent on this campaign, in the account's own currency.",
+      "format": "currency",
+      "higherIsBetter": false,
+      "levels": ["campaign", "ad_group", "ad", "keyword", "search_term", "product", "asset_group"],
+      "sourceField": "metrics.cost_micros",
+      "docUrl": "https://developers.google.com/google-ads/api/fields/v26/metrics#metrics.cost_micros",
+      "group": "Performance"
+    },
+    {
+      "key": "ctr",
+      "label": "Click-through rate",
+      "description": "The share of impressions that led to a click.",
+      "format": "percent",
+      "higherIsBetter": true,
+      "levels": ["campaign", "ad_group", "ad", "keyword", "search_term", "product", "asset_group"],
+      "sourceField": "metrics.ctr",
+      "docUrl": "https://developers.google.com/google-ads/api/fields/v26/metrics#metrics.ctr",
+      "group": "Performance"
+    },
+    {
+      "key": "average_cpc",
+      "label": "Average cost per click",
+      "description": "The average amount you paid each time someone clicked.",
+      "format": "currency",
+      "higherIsBetter": false,
+      "levels": ["campaign", "ad_group", "ad", "keyword", "search_term", "product", "asset_group"],
+      "sourceField": "metrics.average_cpc",
+      "docUrl": "https://developers.google.com/google-ads/api/fields/v26/metrics#metrics.average_cpc",
+      "group": "Performance",
+      "micros": true
+    },
+    {
+      "key": "average_cpm",
+      "label": "Average cost per thousand impressions",
+      "description": "The average amount you paid for one thousand impressions.",
+      "format": "currency",
+      "higherIsBetter": false,
+      "levels": ["campaign", "ad_group", "ad", "asset_group"],
+      "sourceField": "metrics.average_cpm",
+      "docUrl": "https://developers.google.com/google-ads/api/fields/v26/metrics#metrics.average_cpm",
+      "group": "Performance",
+      "micros": true
+    },
+    {
+      "key": "interactions",
+      "label": "Interactions",
+      "description": "The main actions people took with your ad, such as clicks or views.",
+      "format": "number",
+      "higherIsBetter": true,
+      "levels": ["campaign", "ad_group", "ad", "asset_group"],
+      "sourceField": "metrics.interactions",
+      "docUrl": "https://developers.google.com/google-ads/api/fields/v26/metrics#metrics.interactions",
+      "group": "Performance"
+    },
+    {
+      "key": "interaction_rate",
+      "label": "Interaction rate",
+      "description": "The share of impressions that led to an interaction.",
+      "format": "percent",
+      "higherIsBetter": true,
+      "levels": ["campaign", "ad_group", "ad", "asset_group"],
+      "sourceField": "metrics.interaction_rate",
+      "docUrl": "https://developers.google.com/google-ads/api/fields/v26/metrics#metrics.interaction_rate",
+      "group": "Performance"
+    },
+    {
+      "key": "conversions",
+      "label": "Conversions",
+      "description": "The number of valuable actions counted by your conversion tracking.",
+      "format": "number",
+      "higherIsBetter": true,
+      "levels": ["campaign", "ad_group", "ad", "keyword", "search_term", "product", "asset_group"],
+      "sourceField": "metrics.conversions",
+      "docUrl": "https://developers.google.com/google-ads/api/fields/v26/metrics#metrics.conversions",
+      "group": "Conversions"
+    },
+    {
+      "key": "conversions_value",
+      "label": "Conversion value",
+      "description": "The total value your conversion tracking assigned to those actions.",
+      "format": "currency",
+      "higherIsBetter": true,
+      "levels": ["campaign", "ad_group", "ad", "keyword", "search_term", "product", "asset_group"],
+      "sourceField": "metrics.conversions_value",
+      "docUrl": "https://developers.google.com/google-ads/api/fields/v26/metrics#metrics.conversions_value",
+      "group": "Conversions"
+    },
+    {
+      "key": "cost_per_conversion",
+      "label": "Cost per conversion",
+      "description": "The average cost of each conversion.",
+      "format": "currency",
+      "higherIsBetter": false,
+      "levels": ["campaign", "ad_group", "ad", "keyword", "search_term", "product", "asset_group"],
+      "sourceField": "metrics.cost_per_conversion",
+      "docUrl": "https://developers.google.com/google-ads/api/fields/v26/metrics#metrics.cost_per_conversion",
+      "group": "Conversions",
+      "micros": true
+    },
+    {
+      "key": "value_per_conversion",
+      "label": "Value per conversion",
+      "description": "The average value of each conversion.",
+      "format": "currency",
+      "higherIsBetter": true,
+      "levels": ["campaign", "ad_group", "ad", "keyword", "search_term", "product", "asset_group"],
+      "sourceField": "metrics.value_per_conversion",
+      "docUrl": "https://developers.google.com/google-ads/api/fields/v26/metrics#metrics.value_per_conversion",
+      "group": "Conversions"
+    },
+    {
+      "key": "all_conversions",
+      "label": "All conversions",
+      "description": "Conversions from all sources, including cross-device and phone calls.",
+      "format": "number",
+      "higherIsBetter": true,
+      "levels": ["campaign", "ad_group", "ad", "keyword", "search_term", "product", "asset_group"],
+      "sourceField": "metrics.all_conversions",
+      "docUrl": "https://developers.google.com/google-ads/api/fields/v26/metrics#metrics.all_conversions",
+      "group": "Conversions"
+    },
+    {
+      "key": "all_conversions_value",
+      "label": "All conversion value",
+      "description": "The total value of all conversions from all sources.",
+      "format": "currency",
+      "higherIsBetter": true,
+      "levels": ["campaign", "ad_group", "ad", "keyword", "search_term", "product", "asset_group"],
+      "sourceField": "metrics.all_conversions_value",
+      "docUrl": "https://developers.google.com/google-ads/api/fields/v26/metrics#metrics.all_conversions_value",
+      "group": "Conversions"
+    },
+    {
+      "key": "view_through_conversions",
+      "label": "View-through conversions",
+      "description": "Conversions that happened after someone saw your ad but did not click it.",
+      "format": "number",
+      "higherIsBetter": true,
+      "levels": ["campaign", "ad_group", "ad"],
+      "sourceField": "metrics.view_through_conversions",
+      "docUrl": "https://developers.google.com/google-ads/api/fields/v26/metrics#metrics.view_through_conversions",
+      "group": "Conversions"
+    },
+    {
+      "key": "cross_device_conversions",
+      "label": "Cross-device conversions",
+      "description": "Conversions that happened on a different device from the ad click.",
+      "format": "number",
+      "higherIsBetter": true,
+      "levels": ["campaign", "ad_group", "ad"],
+      "sourceField": "metrics.cross_device_conversions",
+      "docUrl": "https://developers.google.com/google-ads/api/fields/v26/metrics#metrics.cross_device_conversions",
+      "group": "Conversions"
+    },
+    {
+      "key": "search_impression_share",
+      "label": "Search impression share",
+      "description": "The share of eligible Search impressions that your ads received.",
+      "format": "percent",
+      "higherIsBetter": true,
+      "levels": ["campaign", "ad_group", "keyword"],
+      "sourceField": "metrics.search_impression_share",
+      "docUrl": "https://developers.google.com/google-ads/api/fields/v26/metrics#metrics.search_impression_share",
+      "group": "Impression share"
+    },
+    {
+      "key": "search_top_impression_share",
+      "label": "Top-of-page impression share",
+      "description": "The share of eligible impressions shown above the organic search results.",
+      "format": "percent",
+      "higherIsBetter": true,
+      "levels": ["campaign", "ad_group", "keyword"],
+      "sourceField": "metrics.search_top_impression_share",
+      "docUrl": "https://developers.google.com/google-ads/api/fields/v26/metrics#metrics.search_top_impression_share",
+      "group": "Impression share"
+    },
+    {
+      "key": "search_absolute_top_impression_share",
+      "label": "Absolute top impression share",
+      "description": "The share of eligible impressions shown in the very first ad position.",
+      "format": "percent",
+      "higherIsBetter": true,
+      "levels": ["campaign", "ad_group", "keyword"],
+      "sourceField": "metrics.search_absolute_top_impression_share",
+      "docUrl": "https://developers.google.com/google-ads/api/fields/v26/metrics#metrics.search_absolute_top_impression_share",
+      "group": "Impression share"
+    },
+    {
+      "key": "search_budget_lost_impression_share",
+      "label": "Lost impression share (budget)",
+      "description": "The share of eligible impressions you missed because the budget ran out.",
+      "format": "percent",
+      "higherIsBetter": false,
+      "levels": ["campaign", "ad_group", "keyword"],
+      "sourceField": "metrics.search_budget_lost_impression_share",
+      "docUrl": "https://developers.google.com/google-ads/api/fields/v26/metrics#metrics.search_budget_lost_impression_share",
+      "group": "Impression share"
+    },
+    {
+      "key": "search_rank_lost_impression_share",
+      "label": "Lost impression share (rank)",
+      "description": "The share of eligible impressions you missed because your ad rank was too low.",
+      "format": "percent",
+      "higherIsBetter": false,
+      "levels": ["campaign", "ad_group", "keyword"],
+      "sourceField": "metrics.search_rank_lost_impression_share",
+      "docUrl": "https://developers.google.com/google-ads/api/fields/v26/metrics#metrics.search_rank_lost_impression_share",
+      "group": "Impression share"
+    },
+    {
+      "key": "content_impression_share",
+      "label": "Display impression share",
+      "description": "The share of eligible Display impressions that your ads received.",
+      "format": "percent",
+      "higherIsBetter": true,
+      "levels": ["campaign", "ad_group"],
+      "sourceField": "metrics.content_impression_share",
+      "docUrl": "https://developers.google.com/google-ads/api/fields/v26/metrics#metrics.content_impression_share",
+      "group": "Impression share"
+    },
+    {
+      "key": "video_views",
+      "label": "Video views",
+      "description": "The number of times your video ad was viewed.",
+      "format": "number",
+      "higherIsBetter": true,
+      "levels": ["campaign", "ad_group", "ad"],
+      "sourceField": "metrics.video_views",
+      "docUrl": "https://developers.google.com/google-ads/api/fields/v26/metrics#metrics.video_views",
+      "group": "Video"
+    },
+    {
+      "key": "video_view_rate",
+      "label": "Video view rate",
+      "description": "The share of video impressions that became views.",
+      "format": "percent",
+      "higherIsBetter": true,
+      "levels": ["campaign", "ad_group", "ad"],
+      "sourceField": "metrics.video_view_rate",
+      "docUrl": "https://developers.google.com/google-ads/api/fields/v26/metrics#metrics.video_view_rate",
+      "group": "Video"
+    },
+    {
+      "key": "average_cpv",
+      "label": "Average cost per view",
+      "description": "The average amount you paid for each video view.",
+      "format": "currency",
+      "higherIsBetter": false,
+      "levels": ["campaign", "ad_group", "ad"],
+      "sourceField": "metrics.average_cpv",
+      "docUrl": "https://developers.google.com/google-ads/api/fields/v26/metrics#metrics.average_cpv",
+      "group": "Video",
+      "micros": true
+    },
+    {
+      "key": "video_quartile_25_rate",
+      "label": "Watched 25%",
+      "description": "The share of views that reached one quarter of the video.",
+      "format": "percent",
+      "higherIsBetter": true,
+      "levels": ["campaign", "ad_group", "ad"],
+      "sourceField": "metrics.video_quartile_25_rate",
+      "docUrl": "https://developers.google.com/google-ads/api/fields/v26/metrics#metrics.video_quartile_25_rate",
+      "group": "Video"
+    },
+    {
+      "key": "video_quartile_50_rate",
+      "label": "Watched 50%",
+      "description": "The share of views that reached halfway through the video.",
+      "format": "percent",
+      "higherIsBetter": true,
+      "levels": ["campaign", "ad_group", "ad"],
+      "sourceField": "metrics.video_quartile_50_rate",
+      "docUrl": "https://developers.google.com/google-ads/api/fields/v26/metrics#metrics.video_quartile_50_rate",
+      "group": "Video"
+    },
+    {
+      "key": "video_quartile_75_rate",
+      "label": "Watched 75%",
+      "description": "The share of views that reached three quarters of the video.",
+      "format": "percent",
+      "higherIsBetter": true,
+      "levels": ["campaign", "ad_group", "ad"],
+      "sourceField": "metrics.video_quartile_75_rate",
+      "docUrl": "https://developers.google.com/google-ads/api/fields/v26/metrics#metrics.video_quartile_75_rate",
+      "group": "Video"
+    },
+    {
+      "key": "video_quartile_100_rate",
+      "label": "Watched 100%",
+      "description": "The share of views that reached the end of the video.",
+      "format": "percent",
+      "higherIsBetter": true,
+      "levels": ["campaign", "ad_group", "ad"],
+      "sourceField": "metrics.video_quartile_100_rate",
+      "docUrl": "https://developers.google.com/google-ads/api/fields/v26/metrics#metrics.video_quartile_100_rate",
+      "group": "Video"
+    },
+    {
+      "key": "engagements",
+      "label": "Engagements",
+      "description": "The number of times people expanded or interacted with your ad.",
+      "format": "number",
+      "higherIsBetter": true,
+      "levels": ["campaign", "ad_group", "ad"],
+      "sourceField": "metrics.engagements",
+      "docUrl": "https://developers.google.com/google-ads/api/fields/v26/metrics#metrics.engagements",
+      "group": "Engagement"
+    },
+    {
+      "key": "engagement_rate",
+      "label": "Engagement rate",
+      "description": "The share of impressions that led to an engagement.",
+      "format": "percent",
+      "higherIsBetter": true,
+      "levels": ["campaign", "ad_group", "ad"],
+      "sourceField": "metrics.engagement_rate",
+      "docUrl": "https://developers.google.com/google-ads/api/fields/v26/metrics#metrics.engagement_rate",
+      "group": "Engagement"
+    },
+    {
+      "key": "phone_calls",
+      "label": "Phone calls",
+      "description": "Calls started from your ads.",
+      "format": "number",
+      "higherIsBetter": true,
+      "levels": ["campaign", "ad_group"],
+      "sourceField": "metrics.phone_calls",
+      "docUrl": "https://developers.google.com/google-ads/api/fields/v26/metrics#metrics.phone_calls",
+      "group": "Engagement"
+    },
+    {
+      "key": "store_visits",
+      "label": "Store visits",
+      "description": "Estimated visits to a physical store after an ad interaction.",
+      "format": "number",
+      "higherIsBetter": true,
+      "levels": ["campaign", "ad_group"],
+      "sourceField": "metrics.store_visits",
+      "docUrl": "https://developers.google.com/google-ads/api/fields/v26/metrics#metrics.store_visits",
+      "group": "Engagement"
+    },
+    {
+      "key": "orders",
+      "label": "Orders",
+      "description": "The number of orders recorded from Shopping ads.",
+      "format": "number",
+      "higherIsBetter": true,
+      "levels": ["campaign", "product", "ad_group"],
+      "sourceField": "metrics.orders",
+      "docUrl": "https://developers.google.com/google-ads/api/fields/v26/metrics#metrics.orders",
+      "group": "Shopping"
+    },
+    {
+      "key": "units_sold",
+      "label": "Units sold",
+      "description": "The number of product units sold from Shopping ads.",
+      "format": "number",
+      "higherIsBetter": true,
+      "levels": ["campaign", "product", "ad_group"],
+      "sourceField": "metrics.units_sold",
+      "docUrl": "https://developers.google.com/google-ads/api/fields/v26/metrics#metrics.units_sold",
+      "group": "Shopping"
+    },
+    {
+      "key": "average_order_value",
+      "label": "Average order value",
+      "description": "The average value of each order.",
+      "format": "currency",
+      "higherIsBetter": true,
+      "levels": ["campaign", "product", "ad_group"],
+      "sourceField": "metrics.average_order_value",
+      "docUrl": "https://developers.google.com/google-ads/api/fields/v26/metrics#metrics.average_order_value",
+      "group": "Shopping"
+    },
+    {
+      "key": "gross_profit",
+      "label": "Gross profit",
+      "description": "Revenue minus the cost of the goods sold, as reported by the API.",
+      "format": "currency",
+      "higherIsBetter": true,
+      "levels": ["campaign", "product", "ad_group"],
+      "sourceField": "metrics.gross_profit",
+      "docUrl": "https://developers.google.com/google-ads/api/fields/v26/metrics#metrics.gross_profit",
+      "group": "Shopping"
+    },
+    {
+      "key": "gross_profit_margin",
+      "label": "Gross profit margin",
+      "description": "Gross profit as a share of revenue.",
+      "format": "percent",
+      "higherIsBetter": true,
+      "levels": ["campaign", "product", "ad_group"],
+      "sourceField": "metrics.gross_profit_margin",
+      "docUrl": "https://developers.google.com/google-ads/api/fields/v26/metrics#metrics.gross_profit_margin",
+      "group": "Shopping"
+    },
+    {
+      "key": "cost_of_goods_sold",
+      "label": "Cost of goods sold",
+      "description": "The cost of the products sold, as reported by the API.",
+      "format": "currency",
+      "higherIsBetter": false,
+      "levels": ["campaign", "product", "ad_group"],
+      "sourceField": "metrics.cost_of_goods_sold",
+      "docUrl": "https://developers.google.com/google-ads/api/fields/v26/metrics#metrics.cost_of_goods_sold",
+      "group": "Shopping"
+    },
+    {
+      "key": "historical_quality_score",
+      "label": "Historical quality score",
+      "description": "Google's past quality score for the keyword, on a 1 to 10 scale.",
+      "format": "number",
+      "higherIsBetter": true,
+      "levels": ["keyword"],
+      "sourceField": "metrics.historical_quality_score",
+      "docUrl": "https://developers.google.com/google-ads/api/fields/v26/metrics#metrics.historical_quality_score",
+      "group": "Quality"
+    }
+  ],
+  "dimensions": [
+    {
+      "key": "date",
+      "label": "Date",
+      "description": "The day the activity happened.",
+      "docUrl": "https://developers.google.com/google-ads/api/fields/v26/segments#segments.date"
+    },
+    {
+      "key": "device",
+      "label": "Device",
+      "description": "Whether the person used a mobile phone, tablet, computer or TV.",
+      "docUrl": "https://developers.google.com/google-ads/api/fields/v26/segments#segments.device"
+    },
+    {
+      "key": "ad_network_type",
+      "label": "Network",
+      "description": "Where the ad appeared, such as Google Search or a partner site.",
+      "docUrl": "https://developers.google.com/google-ads/api/fields/v26/segments#segments.ad_network_type"
+    },
+    {
+      "key": "day_of_week",
+      "label": "Day of week",
+      "description": "The weekday the activity happened.",
+      "docUrl": "https://developers.google.com/google-ads/api/fields/v26/segments#segments.day_of_week"
+    },
+    {
+      "key": "hour",
+      "label": "Hour",
+      "description": "The hour of the day when the ad appeared.",
+      "docUrl": "https://developers.google.com/google-ads/api/fields/v26/segments#segments.hour"
+    },
+    {
+      "key": "country",
+      "label": "Country",
+      "description": "The country where the person was located.",
+      "docUrl": "https://developers.google.com/google-ads/api/fields/v26/segments#segments.geo_target_country"
+    }
+  ]
+}

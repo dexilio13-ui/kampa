@@ -1,0 +1,364 @@
+{
+  "network": "meta",
+  "label": "Meta",
+  "defaultLevel": "campaign",
+  "levels": [
+    { "key": "account", "label": "Account", "description": "One row for the whole ad account." },
+    { "key": "campaign", "label": "Campaigns", "description": "One row per campaign." },
+    { "key": "ad_group", "label": "Ad sets", "description": "One row per ad set." },
+    { "key": "ad", "label": "Ads", "description": "One row per ad." }
+  ],
+  "defaultMetrics": ["impressions", "reach", "spend", "clicks", "ctr", "actions"],
+  "groups": ["Delivery", "Clicks", "Results", "Video", "Quality"],
+  "actionTypes": ["purchase", "lead", "link_click", "landing_page_view", "add_to_cart", "initiate_checkout", "complete_registration", "onsite_conversion.messaging_conversation_started_7d"],
+  "metrics": [
+    {
+      "key": "impressions",
+      "label": "Impressions",
+      "description": "How many times your ads were on screen.",
+      "format": "number",
+      "higherIsBetter": true,
+      "levels": ["account", "campaign", "ad_group", "ad"],
+      "sourceField": "impressions",
+      "docUrl": "https://developers.facebook.com/docs/marketing-api/reference/ad-account/insights/",
+      "group": "Delivery"
+    },
+    {
+      "key": "reach",
+      "label": "Reach",
+      "description": "How many different people saw your ads at least once.",
+      "format": "number",
+      "higherIsBetter": true,
+      "levels": ["account", "campaign", "ad_group", "ad"],
+      "sourceField": "reach",
+      "docUrl": "https://developers.facebook.com/docs/marketing-api/reference/ad-account/insights/",
+      "group": "Delivery"
+    },
+    {
+      "key": "frequency",
+      "label": "Frequency",
+      "description": "The average number of times each person saw your ad.",
+      "format": "number",
+      "higherIsBetter": false,
+      "levels": ["account", "campaign", "ad_group", "ad"],
+      "sourceField": "frequency",
+      "docUrl": "https://developers.facebook.com/docs/marketing-api/reference/ad-account/insights/",
+      "group": "Delivery"
+    },
+    {
+      "key": "spend",
+      "label": "Spend",
+      "description": "How much you spent, in the ad account's own currency.",
+      "format": "currency",
+      "higherIsBetter": false,
+      "levels": ["account", "campaign", "ad_group", "ad"],
+      "sourceField": "spend",
+      "docUrl": "https://developers.facebook.com/docs/marketing-api/reference/ad-account/insights/",
+      "group": "Delivery"
+    },
+    {
+      "key": "clicks",
+      "label": "Clicks",
+      "description": "The number of clicks on your ads.",
+      "format": "number",
+      "higherIsBetter": true,
+      "levels": ["account", "campaign", "ad_group", "ad"],
+      "sourceField": "clicks",
+      "docUrl": "https://developers.facebook.com/docs/marketing-api/reference/ad-account/insights/",
+      "group": "Clicks"
+    },
+    {
+      "key": "unique_clicks",
+      "label": "Unique clicks",
+      "description": "Clicks counted once per person.",
+      "format": "number",
+      "higherIsBetter": true,
+      "levels": ["account", "campaign", "ad_group", "ad"],
+      "sourceField": "unique_clicks",
+      "docUrl": "https://developers.facebook.com/docs/marketing-api/reference/ad-account/insights/",
+      "group": "Clicks"
+    },
+    {
+      "key": "inline_link_clicks",
+      "label": "Link clicks",
+      "description": "Clicks on links that open a destination on or off Meta.",
+      "format": "number",
+      "higherIsBetter": true,
+      "levels": ["account", "campaign", "ad_group", "ad"],
+      "sourceField": "inline_link_clicks",
+      "docUrl": "https://developers.facebook.com/docs/marketing-api/reference/ad-account/insights/",
+      "group": "Clicks"
+    },
+    {
+      "key": "inline_link_click_ctr",
+      "label": "Link click-through rate",
+      "description": "The share of impressions that led to a link click.",
+      "format": "percent",
+      "higherIsBetter": true,
+      "levels": ["account", "campaign", "ad_group", "ad"],
+      "sourceField": "inline_link_click_ctr",
+      "docUrl": "https://developers.facebook.com/docs/marketing-api/reference/ad-account/insights/",
+      "group": "Clicks"
+    },
+    {
+      "key": "ctr",
+      "label": "Click-through rate",
+      "description": "The share of impressions that led to a click.",
+      "format": "percent",
+      "higherIsBetter": true,
+      "levels": ["account", "campaign", "ad_group", "ad"],
+      "sourceField": "ctr",
+      "docUrl": "https://developers.facebook.com/docs/marketing-api/reference/ad-account/insights/",
+      "group": "Clicks"
+    },
+    {
+      "key": "cpc",
+      "label": "Cost per click",
+      "description": "The average amount you paid for each click.",
+      "format": "currency",
+      "higherIsBetter": false,
+      "levels": ["account", "campaign", "ad_group", "ad"],
+      "sourceField": "cpc",
+      "docUrl": "https://developers.facebook.com/docs/marketing-api/reference/ad-account/insights/",
+      "group": "Clicks"
+    },
+    {
+      "key": "cpm",
+      "label": "Cost per thousand impressions",
+      "description": "The average amount you paid for one thousand impressions.",
+      "format": "currency",
+      "higherIsBetter": false,
+      "levels": ["account", "campaign", "ad_group", "ad"],
+      "sourceField": "cpm",
+      "docUrl": "https://developers.facebook.com/docs/marketing-api/reference/ad-account/insights/",
+      "group": "Clicks"
+    },
+    {
+      "key": "cpp",
+      "label": "Cost per thousand people reached",
+      "description": "The average amount you paid to reach one thousand people.",
+      "format": "currency",
+      "higherIsBetter": false,
+      "levels": ["account", "campaign", "ad_group", "ad"],
+      "sourceField": "cpp",
+      "docUrl": "https://developers.facebook.com/docs/marketing-api/reference/ad-account/insights/",
+      "group": "Clicks"
+    },
+    {
+      "key": "actions",
+      "label": "Actions",
+      "description": "The number of a chosen action, such as purchases or leads.",
+      "format": "number",
+      "higherIsBetter": true,
+      "levels": ["account", "campaign", "ad_group", "ad"],
+      "sourceField": "actions",
+      "docUrl": "https://developers.facebook.com/docs/marketing-api/reference/ad-account/insights/",
+      "group": "Results",
+      "actionField": true
+    },
+    {
+      "key": "action_values",
+      "label": "Action value",
+      "description": "The value of a chosen action, in the ad account's currency.",
+      "format": "currency",
+      "higherIsBetter": true,
+      "levels": ["account", "campaign", "ad_group", "ad"],
+      "sourceField": "action_values",
+      "docUrl": "https://developers.facebook.com/docs/marketing-api/reference/ad-account/insights/",
+      "group": "Results",
+      "actionField": true
+    },
+    {
+      "key": "cost_per_action_type",
+      "label": "Cost per action",
+      "description": "The average cost of a chosen action.",
+      "format": "currency",
+      "higherIsBetter": false,
+      "levels": ["account", "campaign", "ad_group", "ad"],
+      "sourceField": "cost_per_action_type",
+      "docUrl": "https://developers.facebook.com/docs/marketing-api/reference/ad-account/insights/",
+      "group": "Results",
+      "actionField": true
+    },
+    {
+      "key": "purchase_roas",
+      "label": "Purchase ROAS",
+      "description": "The revenue from purchases divided by the amount spent.",
+      "format": "number",
+      "higherIsBetter": true,
+      "levels": ["account", "campaign", "ad_group", "ad"],
+      "sourceField": "purchase_roas",
+      "docUrl": "https://developers.facebook.com/docs/marketing-api/reference/ad-account/insights/",
+      "group": "Results",
+      "actionField": true
+    },
+    {
+      "key": "video_play_actions",
+      "label": "Video plays",
+      "description": "The number of times your video started playing.",
+      "format": "number",
+      "higherIsBetter": true,
+      "levels": ["account", "campaign", "ad_group", "ad"],
+      "sourceField": "video_play_actions",
+      "docUrl": "https://developers.facebook.com/docs/marketing-api/reference/ad-account/insights/",
+      "group": "Video",
+      "actionField": true,
+      "experimental": true
+    },
+    {
+      "key": "video_thruplay_watched_actions",
+      "label": "ThruPlays",
+      "description": "Video plays that reached the end, or at least 15 seconds.",
+      "format": "number",
+      "higherIsBetter": true,
+      "levels": ["account", "campaign", "ad_group", "ad"],
+      "sourceField": "video_thruplay_watched_actions",
+      "docUrl": "https://developers.facebook.com/docs/marketing-api/reference/ad-account/insights/",
+      "group": "Video",
+      "actionField": true,
+      "experimental": true
+    },
+    {
+      "key": "video_p25_watched_actions",
+      "label": "Watched 25%",
+      "description": "Video plays that reached one quarter of the video.",
+      "format": "number",
+      "higherIsBetter": true,
+      "levels": ["account", "campaign", "ad_group", "ad"],
+      "sourceField": "video_p25_watched_actions",
+      "docUrl": "https://developers.facebook.com/docs/marketing-api/reference/ad-account/insights/",
+      "group": "Video",
+      "actionField": true,
+      "experimental": true
+    },
+    {
+      "key": "video_p50_watched_actions",
+      "label": "Watched 50%",
+      "description": "Video plays that reached halfway through the video.",
+      "format": "number",
+      "higherIsBetter": true,
+      "levels": ["account", "campaign", "ad_group", "ad"],
+      "sourceField": "video_p50_watched_actions",
+      "docUrl": "https://developers.facebook.com/docs/marketing-api/reference/ad-account/insights/",
+      "group": "Video",
+      "actionField": true,
+      "experimental": true
+    },
+    {
+      "key": "video_p75_watched_actions",
+      "label": "Watched 75%",
+      "description": "Video plays that reached three quarters of the video.",
+      "format": "number",
+      "higherIsBetter": true,
+      "levels": ["account", "campaign", "ad_group", "ad"],
+      "sourceField": "video_p75_watched_actions",
+      "docUrl": "https://developers.facebook.com/docs/marketing-api/reference/ad-account/insights/",
+      "group": "Video",
+      "actionField": true,
+      "experimental": true
+    },
+    {
+      "key": "video_p95_watched_actions",
+      "label": "Watched 95%",
+      "description": "Video plays that reached 95 percent of the video.",
+      "format": "number",
+      "higherIsBetter": true,
+      "levels": ["account", "campaign", "ad_group", "ad"],
+      "sourceField": "video_p95_watched_actions",
+      "docUrl": "https://developers.facebook.com/docs/marketing-api/reference/ad-account/insights/",
+      "group": "Video",
+      "actionField": true,
+      "experimental": true
+    },
+    {
+      "key": "video_p100_watched_actions",
+      "label": "Watched 100%",
+      "description": "Video plays that reached the end of the video.",
+      "format": "number",
+      "higherIsBetter": true,
+      "levels": ["account", "campaign", "ad_group", "ad"],
+      "sourceField": "video_p100_watched_actions",
+      "docUrl": "https://developers.facebook.com/docs/marketing-api/reference/ad-account/insights/",
+      "group": "Video",
+      "actionField": true,
+      "experimental": true
+    },
+    {
+      "key": "quality_ranking",
+      "label": "Quality ranking",
+      "description": "How your ad's quality compares with ads competing for the same audience.",
+      "format": "text",
+      "higherIsBetter": true,
+      "levels": ["account", "campaign", "ad_group", "ad"],
+      "sourceField": "quality_ranking",
+      "docUrl": "https://developers.facebook.com/docs/marketing-api/reference/ad-account/insights/",
+      "group": "Quality"
+    },
+    {
+      "key": "engagement_rate_ranking",
+      "label": "Engagement rate ranking",
+      "description": "How your ad's engagement compares with ads competing for the same audience.",
+      "format": "text",
+      "higherIsBetter": true,
+      "levels": ["account", "campaign", "ad_group", "ad"],
+      "sourceField": "engagement_rate_ranking",
+      "docUrl": "https://developers.facebook.com/docs/marketing-api/reference/ad-account/insights/",
+      "group": "Quality"
+    },
+    {
+      "key": "conversion_rate_ranking",
+      "label": "Conversion rate ranking",
+      "description": "How your ad's conversion rate compares with ads competing for the same audience.",
+      "format": "text",
+      "higherIsBetter": true,
+      "levels": ["account", "campaign", "ad_group", "ad"],
+      "sourceField": "conversion_rate_ranking",
+      "docUrl": "https://developers.facebook.com/docs/marketing-api/reference/ad-account/insights/",
+      "group": "Quality"
+    }
+  ],
+  "dimensions": [
+    {
+      "key": "publisher_platform",
+      "label": "Platform",
+      "description": "Where the ad appeared: Facebook, Instagram, Audience Network or Messenger.",
+      "docUrl": "https://developers.facebook.com/docs/marketing-api/insights/breakdowns/"
+    },
+    {
+      "key": "platform_position",
+      "label": "Placement",
+      "description": "The exact place the ad appeared, such as feed, story or reels.",
+      "docUrl": "https://developers.facebook.com/docs/marketing-api/insights/breakdowns/"
+    },
+    {
+      "key": "device_platform",
+      "label": "Device",
+      "description": "The device type used to see the ad.",
+      "docUrl": "https://developers.facebook.com/docs/marketing-api/insights/breakdowns/"
+    },
+    {
+      "key": "impression_device",
+      "label": "Impression device",
+      "description": "The device on which the impression happened. Must be combined with another breakdown.",
+      "docUrl": "https://developers.facebook.com/docs/marketing-api/insights/breakdowns/"
+    },
+    {
+      "key": "age",
+      "label": "Age",
+      "description": "The age group of the people who saw the ad.",
+      "docUrl": "https://developers.facebook.com/docs/marketing-api/insights/breakdowns/"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "description": "The gender of the people who saw the ad.",
+      "docUrl": "https://developers.facebook.com/docs/marketing-api/insights/breakdowns/"
+    },
+    {
+      "key": "country",
+      "label": "Country",
+      "description": "The country where the ad was seen.",
+      "docUrl": "https://developers.facebook.com/docs/marketing-api/insights/breakdowns/"
+    }
+  ]
+}

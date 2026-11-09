@@ -1,0 +1,340 @@
+{
+  "network": "youtube",
+  "label": "YouTube",
+  "defaultLevel": "channel",
+  "levels": [
+    { "key": "channel", "label": "Channel", "description": "One row for the whole channel." },
+    { "key": "video", "label": "Videos", "description": "One row per video." }
+  ],
+  "defaultMetrics": ["views", "estimatedMinutesWatched", "averageViewDuration", "likes", "comments", "subscribersGained"],
+  "groups": ["Views", "Watch time", "Engagement", "Cards", "Revenue"],
+  "metrics": [
+    {
+      "key": "views",
+      "label": "Views",
+      "description": "The number of video views reported by YouTube.",
+      "format": "number",
+      "higherIsBetter": true,
+      "levels": ["channel", "video"],
+      "sourceField": "views",
+      "docUrl": "https://developers.google.com/youtube/analytics/metrics#views",
+      "group": "Views"
+    },
+    {
+      "key": "engagedViews",
+      "label": "Engaged views",
+      "description": "Views past the first frame or after a deliberate play.",
+      "format": "number",
+      "higherIsBetter": true,
+      "levels": ["channel", "video"],
+      "sourceField": "engagedViews",
+      "docUrl": "https://developers.google.com/youtube/analytics/metrics#engagedViews",
+      "group": "Views"
+    },
+    {
+      "key": "viewerPercentage",
+      "label": "Signed-in viewers",
+      "description": "The share of viewers who were signed in when watching.",
+      "format": "percent",
+      "higherIsBetter": true,
+      "levels": ["channel"],
+      "sourceField": "viewerPercentage",
+      "docUrl": "https://developers.google.com/youtube/analytics/metrics#viewerPercentage",
+      "group": "Views"
+    },
+    {
+      "key": "estimatedMinutesWatched",
+      "label": "Watch time",
+      "description": "The number of minutes people watched, as estimated by YouTube.",
+      "format": "number",
+      "higherIsBetter": true,
+      "levels": ["channel", "video"],
+      "sourceField": "estimatedMinutesWatched",
+      "docUrl": "https://developers.google.com/youtube/analytics/metrics#estimatedMinutesWatched",
+      "group": "Watch time"
+    },
+    {
+      "key": "averageViewDuration",
+      "label": "Average view duration",
+      "description": "The average length of a playback, in seconds.",
+      "format": "duration",
+      "higherIsBetter": true,
+      "levels": ["channel", "video"],
+      "sourceField": "averageViewDuration",
+      "docUrl": "https://developers.google.com/youtube/analytics/metrics#averageViewDuration",
+      "group": "Watch time"
+    },
+    {
+      "key": "averageViewPercentage",
+      "label": "Average percentage watched",
+      "description": "The average share of a video that people watched.",
+      "format": "percent",
+      "higherIsBetter": true,
+      "levels": ["channel", "video"],
+      "sourceField": "averageViewPercentage",
+      "docUrl": "https://developers.google.com/youtube/analytics/metrics#averageViewPercentage",
+      "group": "Watch time"
+    },
+    {
+      "key": "likes",
+      "label": "Likes",
+      "description": "The number of times people liked a video.",
+      "format": "number",
+      "higherIsBetter": true,
+      "levels": ["channel", "video"],
+      "sourceField": "likes",
+      "docUrl": "https://developers.google.com/youtube/analytics/metrics#likes",
+      "group": "Engagement"
+    },
+    {
+      "key": "dislikes",
+      "label": "Dislikes",
+      "description": "The number of times people disliked a video.",
+      "format": "number",
+      "higherIsBetter": false,
+      "levels": ["channel", "video"],
+      "sourceField": "dislikes",
+      "docUrl": "https://developers.google.com/youtube/analytics/metrics#dislikes",
+      "group": "Engagement"
+    },
+    {
+      "key": "comments",
+      "label": "Comments",
+      "description": "The number of comments people added.",
+      "format": "number",
+      "higherIsBetter": true,
+      "levels": ["channel", "video"],
+      "sourceField": "comments",
+      "docUrl": "https://developers.google.com/youtube/analytics/metrics#comments",
+      "group": "Engagement"
+    },
+    {
+      "key": "shares",
+      "label": "Shares",
+      "description": "The number of times people shared a video.",
+      "format": "number",
+      "higherIsBetter": true,
+      "levels": ["channel", "video"],
+      "sourceField": "shares",
+      "docUrl": "https://developers.google.com/youtube/analytics/metrics#shares",
+      "group": "Engagement"
+    },
+    {
+      "key": "subscribersGained",
+      "label": "Subscribers gained",
+      "description": "The number of times people subscribed to your channel.",
+      "format": "number",
+      "higherIsBetter": true,
+      "levels": ["channel", "video"],
+      "sourceField": "subscribersGained",
+      "docUrl": "https://developers.google.com/youtube/analytics/metrics#subscribersGained",
+      "group": "Engagement"
+    },
+    {
+      "key": "subscribersLost",
+      "label": "Subscribers lost",
+      "description": "The number of times people unsubscribed from your channel.",
+      "format": "number",
+      "higherIsBetter": false,
+      "levels": ["channel", "video"],
+      "sourceField": "subscribersLost",
+      "docUrl": "https://developers.google.com/youtube/analytics/metrics#subscribersLost",
+      "group": "Engagement"
+    },
+    {
+      "key": "videosAddedToPlaylists",
+      "label": "Added to playlists",
+      "description": "The number of times your videos were added to a playlist.",
+      "format": "number",
+      "higherIsBetter": true,
+      "levels": ["channel", "video"],
+      "sourceField": "videosAddedToPlaylists",
+      "docUrl": "https://developers.google.com/youtube/analytics/metrics#videosAddedToPlaylists",
+      "group": "Engagement"
+    },
+    {
+      "key": "videosRemovedFromPlaylists",
+      "label": "Removed from playlists",
+      "description": "The number of times your videos were removed from a playlist.",
+      "format": "number",
+      "higherIsBetter": false,
+      "levels": ["channel", "video"],
+      "sourceField": "videosRemovedFromPlaylists",
+      "docUrl": "https://developers.google.com/youtube/analytics/metrics#videosRemovedFromPlaylists",
+      "group": "Engagement"
+    },
+    {
+      "key": "cardImpressions",
+      "label": "Card impressions",
+      "description": "The number of times cards were displayed.",
+      "format": "number",
+      "higherIsBetter": true,
+      "levels": ["channel", "video"],
+      "sourceField": "cardImpressions",
+      "docUrl": "https://developers.google.com/youtube/analytics/metrics#cardImpressions",
+      "group": "Cards"
+    },
+    {
+      "key": "cardClicks",
+      "label": "Card clicks",
+      "description": "The number of times cards were clicked.",
+      "format": "number",
+      "higherIsBetter": true,
+      "levels": ["channel", "video"],
+      "sourceField": "cardClicks",
+      "docUrl": "https://developers.google.com/youtube/analytics/metrics#cardClicks",
+      "group": "Cards"
+    },
+    {
+      "key": "cardClickRate",
+      "label": "Card click rate",
+      "description": "The share of card impressions that became clicks.",
+      "format": "percent",
+      "higherIsBetter": true,
+      "levels": ["channel", "video"],
+      "sourceField": "cardClickRate",
+      "docUrl": "https://developers.google.com/youtube/analytics/metrics#cardClickRate",
+      "group": "Cards"
+    },
+    {
+      "key": "estimatedRevenue",
+      "label": "Estimated revenue",
+      "description": "YouTube's estimate of net revenue from all sources.",
+      "format": "currency",
+      "higherIsBetter": true,
+      "levels": ["channel", "video"],
+      "sourceField": "estimatedRevenue",
+      "docUrl": "https://developers.google.com/youtube/analytics/metrics#estimatedRevenue",
+      "group": "Revenue",
+      "requiresMonetization": true
+    },
+    {
+      "key": "estimatedAdRevenue",
+      "label": "Estimated ad revenue",
+      "description": "YouTube's estimate of net revenue from ads.",
+      "format": "currency",
+      "higherIsBetter": true,
+      "levels": ["channel", "video"],
+      "sourceField": "estimatedAdRevenue",
+      "docUrl": "https://developers.google.com/youtube/analytics/metrics#estimatedAdRevenue",
+      "group": "Revenue",
+      "requiresMonetization": true
+    },
+    {
+      "key": "grossRevenue",
+      "label": "Gross revenue",
+      "description": "YouTube's estimate of gross revenue from ads.",
+      "format": "currency",
+      "higherIsBetter": true,
+      "levels": ["channel", "video"],
+      "sourceField": "grossRevenue",
+      "docUrl": "https://developers.google.com/youtube/analytics/metrics#grossRevenue",
+      "group": "Revenue",
+      "requiresMonetization": true
+    },
+    {
+      "key": "cpm",
+      "label": "CPM",
+      "description": "The estimated gross revenue per thousand ad impressions.",
+      "format": "currency",
+      "higherIsBetter": true,
+      "levels": ["channel", "video"],
+      "sourceField": "cpm",
+      "docUrl": "https://developers.google.com/youtube/analytics/metrics#cpm",
+      "group": "Revenue",
+      "requiresMonetization": true
+    },
+    {
+      "key": "adImpressions",
+      "label": "Ad impressions",
+      "description": "The number of verified ad impressions.",
+      "format": "number",
+      "higherIsBetter": true,
+      "levels": ["channel", "video"],
+      "sourceField": "adImpressions",
+      "docUrl": "https://developers.google.com/youtube/analytics/metrics#adImpressions",
+      "group": "Revenue",
+      "requiresMonetization": true
+    },
+    {
+      "key": "monetizedPlaybacks",
+      "label": "Monetized playbacks",
+      "description": "The number of playbacks that showed at least one ad.",
+      "format": "number",
+      "higherIsBetter": true,
+      "levels": ["channel", "video"],
+      "sourceField": "monetizedPlaybacks",
+      "docUrl": "https://developers.google.com/youtube/analytics/metrics#monetizedPlaybacks",
+      "group": "Revenue",
+      "requiresMonetization": true
+    },
+    {
+      "key": "playbackBasedCpm",
+      "label": "Playback-based CPM",
+      "description": "The estimated gross revenue per thousand playbacks.",
+      "format": "currency",
+      "higherIsBetter": true,
+      "levels": ["channel", "video"],
+      "sourceField": "playbackBasedCpm",
+      "docUrl": "https://developers.google.com/youtube/analytics/metrics#playbackBasedCpm",
+      "group": "Revenue",
+      "requiresMonetization": true
+    }
+  ],
+  "dimensions": [
+    {
+      "key": "day",
+      "label": "Day",
+      "description": "The day the activity happened.",
+      "docUrl": "https://developers.google.com/youtube/analytics/dimensions#day"
+    },
+    {
+      "key": "video",
+      "label": "Video",
+      "description": "The YouTube video.",
+      "docUrl": "https://developers.google.com/youtube/analytics/dimensions#video"
+    },
+    {
+      "key": "country",
+      "label": "Country",
+      "description": "The country where the viewer was located.",
+      "docUrl": "https://developers.google.com/youtube/analytics/dimensions#country"
+    },
+    {
+      "key": "ageGroup",
+      "label": "Age group",
+      "description": "The viewer's age group.",
+      "docUrl": "https://developers.google.com/youtube/analytics/dimensions#ageGroup"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "description": "The viewer's gender.",
+      "docUrl": "https://developers.google.com/youtube/analytics/dimensions#gender"
+    },
+    {
+      "key": "trafficSource",
+      "label": "Traffic source",
+      "description": "How viewers found the video.",
+      "docUrl": "https://developers.google.com/youtube/analytics/dimensions#trafficSource"
+    },
+    {
+      "key": "deviceType",
+      "label": "Device type",
+      "description": "The device used to watch.",
+      "docUrl": "https://developers.google.com/youtube/analytics/dimensions#deviceType"
+    },
+    {
+      "key": "playbackLocation",
+      "label": "Playback location",
+      "description": "Where playback happened, such as the watch page or an embedded player.",
+      "docUrl": "https://developers.google.com/youtube/analytics/dimensions#playbackLocation"
+    },
+    {
+      "key": "subscriberStatus",
+      "label": "Subscriber status",
+      "description": "Whether the viewer was subscribed to the channel.",
+      "docUrl": "https://developers.google.com/youtube/analytics/dimensions#subscriberStatus"
+    }
+  ]
+}

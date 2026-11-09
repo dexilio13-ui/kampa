@@ -1,0 +1,32 @@
+{
+  "name": "adpulse",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AdPulse - read-only, all-in-one ad metrics dashboard",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "scan:secrets": "node scripts/scan-secrets.mjs",
+    "verify": "npm run lint && npm run typecheck && npm test && npm run build && npm run scan:secrets"
+  },
+  "dependencies": {
+    "next": "15.5.29",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.7",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "eslint": "^9.39.0",
+    "eslint-config-next": "15.5.29",
+    "typescript": "^5.9.0",
+    "vitest": "^3.2.4"
+  }
+}

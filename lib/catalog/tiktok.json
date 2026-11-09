@@ -1,0 +1,323 @@
+{
+  "network": "tiktok",
+  "label": "TikTok",
+  "defaultLevel": "campaign",
+  "levels": [
+    { "key": "account", "label": "Advertiser", "description": "One row for the whole advertiser account." },
+    { "key": "campaign", "label": "Campaigns", "description": "One row per campaign." },
+    { "key": "ad_group", "label": "Ad groups", "description": "One row per ad group." },
+    { "key": "ad", "label": "Ads", "description": "One row per ad." }
+  ],
+  "defaultMetrics": ["spend", "impressions", "clicks", "ctr", "conversion", "cost_per_conversion"],
+  "groups": ["Delivery", "Clicks", "Conversions", "Video", "Engagement"],
+  "metrics": [
+    {
+      "key": "spend",
+      "label": "Spend",
+      "description": "How much you spent, in the advertiser account's own currency.",
+      "format": "currency",
+      "higherIsBetter": false,
+      "levels": ["account", "campaign", "ad_group", "ad"],
+      "sourceField": "spend",
+      "docUrl": "https://business-api.tiktok.com/portal/docs?id=1738864778664961",
+      "group": "Delivery"
+    },
+    {
+      "key": "impressions",
+      "label": "Impressions",
+      "description": "How many times your ad was shown.",
+      "format": "number",
+      "higherIsBetter": true,
+      "levels": ["account", "campaign", "ad_group", "ad"],
+      "sourceField": "impressions",
+      "docUrl": "https://business-api.tiktok.com/portal/docs?id=1738864778664961",
+      "group": "Delivery"
+    },
+    {
+      "key": "reach",
+      "label": "Reach",
+      "description": "How many different people saw your ad.",
+      "format": "number",
+      "higherIsBetter": true,
+      "levels": ["account", "campaign", "ad_group", "ad"],
+      "sourceField": "reach",
+      "docUrl": "https://business-api.tiktok.com/portal/docs?id=1738864778664961",
+      "group": "Delivery"
+    },
+    {
+      "key": "frequency",
+      "label": "Frequency",
+      "description": "The average number of times each person saw your ad.",
+      "format": "number",
+      "higherIsBetter": false,
+      "levels": ["account", "campaign", "ad_group", "ad"],
+      "sourceField": "frequency",
+      "docUrl": "https://business-api.tiktok.com/portal/docs?id=1738864778664961",
+      "group": "Delivery"
+    },
+    {
+      "key": "clicks",
+      "label": "Clicks",
+      "description": "The number of clicks on your ad.",
+      "format": "number",
+      "higherIsBetter": true,
+      "levels": ["account", "campaign", "ad_group", "ad"],
+      "sourceField": "clicks",
+      "docUrl": "https://business-api.tiktok.com/portal/docs?id=1738864778664961",
+      "group": "Clicks"
+    },
+    {
+      "key": "ctr",
+      "label": "Click-through rate",
+      "description": "The share of impressions that led to a click.",
+      "format": "percent",
+      "higherIsBetter": true,
+      "levels": ["account", "campaign", "ad_group", "ad"],
+      "sourceField": "ctr",
+      "docUrl": "https://business-api.tiktok.com/portal/docs?id=1738864778664961",
+      "group": "Clicks"
+    },
+    {
+      "key": "cpc",
+      "label": "Cost per click",
+      "description": "The average amount you paid for each click.",
+      "format": "currency",
+      "higherIsBetter": false,
+      "levels": ["account", "campaign", "ad_group", "ad"],
+      "sourceField": "cpc",
+      "docUrl": "https://business-api.tiktok.com/portal/docs?id=1738864778664961",
+      "group": "Clicks"
+    },
+    {
+      "key": "cpm",
+      "label": "Cost per thousand impressions",
+      "description": "The average amount you paid for one thousand impressions.",
+      "format": "currency",
+      "higherIsBetter": false,
+      "levels": ["account", "campaign", "ad_group", "ad"],
+      "sourceField": "cpm",
+      "docUrl": "https://business-api.tiktok.com/portal/docs?id=1738864778664961",
+      "group": "Clicks"
+    },
+    {
+      "key": "conversion",
+      "label": "Conversions",
+      "description": "The number of conversions recorded by TikTok.",
+      "format": "number",
+      "higherIsBetter": true,
+      "levels": ["account", "campaign", "ad_group", "ad"],
+      "sourceField": "conversion",
+      "docUrl": "https://business-api.tiktok.com/portal/docs?id=1738864778664961",
+      "group": "Conversions"
+    },
+    {
+      "key": "cost_per_conversion",
+      "label": "Cost per conversion",
+      "description": "The average cost of each conversion.",
+      "format": "currency",
+      "higherIsBetter": false,
+      "levels": ["account", "campaign", "ad_group", "ad"],
+      "sourceField": "cost_per_conversion",
+      "docUrl": "https://business-api.tiktok.com/portal/docs?id=1738864778664961",
+      "group": "Conversions"
+    },
+    {
+      "key": "conversion_rate",
+      "label": "Conversion rate",
+      "description": "The share of clicks that became conversions.",
+      "format": "percent",
+      "higherIsBetter": true,
+      "levels": ["account", "campaign", "ad_group", "ad"],
+      "sourceField": "conversion_rate",
+      "docUrl": "https://business-api.tiktok.com/portal/docs?id=1738864778664961",
+      "group": "Conversions",
+      "experimental": true
+    },
+    {
+      "key": "video_play_actions",
+      "label": "Video plays",
+      "description": "The number of times your video started playing.",
+      "format": "number",
+      "higherIsBetter": true,
+      "levels": ["account", "campaign", "ad_group", "ad"],
+      "sourceField": "video_play_actions",
+      "docUrl": "https://business-api.tiktok.com/portal/docs?id=1738864778664961",
+      "group": "Video"
+    },
+    {
+      "key": "video_watched_2s",
+      "label": "Watched 2 seconds",
+      "description": "The number of times your video was watched for at least two seconds.",
+      "format": "number",
+      "higherIsBetter": true,
+      "levels": ["account", "campaign", "ad_group", "ad"],
+      "sourceField": "video_watched_2s",
+      "docUrl": "https://business-api.tiktok.com/portal/docs?id=1738864778664961",
+      "group": "Video"
+    },
+    {
+      "key": "video_watched_6s",
+      "label": "Watched 6 seconds",
+      "description": "The number of times your video was watched for at least six seconds.",
+      "format": "number",
+      "higherIsBetter": true,
+      "levels": ["account", "campaign", "ad_group", "ad"],
+      "sourceField": "video_watched_6s",
+      "docUrl": "https://business-api.tiktok.com/portal/docs?id=1738864778664961",
+      "group": "Video"
+    },
+    {
+      "key": "average_video_play",
+      "label": "Average time watched",
+      "description": "The average time people spent watching your video, in seconds.",
+      "format": "duration",
+      "higherIsBetter": true,
+      "levels": ["account", "campaign", "ad_group", "ad"],
+      "sourceField": "average_video_play",
+      "docUrl": "https://business-api.tiktok.com/portal/docs?id=1738864778664961",
+      "group": "Video",
+      "experimental": true
+    },
+    {
+      "key": "video_views_p25",
+      "label": "Watched 25%",
+      "description": "The number of views that reached one quarter of the video.",
+      "format": "number",
+      "higherIsBetter": true,
+      "levels": ["account", "campaign", "ad_group", "ad"],
+      "sourceField": "video_views_p25",
+      "docUrl": "https://business-api.tiktok.com/portal/docs?id=1738864778664961",
+      "group": "Video",
+      "experimental": true
+    },
+    {
+      "key": "video_views_p50",
+      "label": "Watched 50%",
+      "description": "The number of views that reached halfway through the video.",
+      "format": "number",
+      "higherIsBetter": true,
+      "levels": ["account", "campaign", "ad_group", "ad"],
+      "sourceField": "video_views_p50",
+      "docUrl": "https://business-api.tiktok.com/portal/docs?id=1738864778664961",
+      "group": "Video",
+      "experimental": true
+    },
+    {
+      "key": "video_views_p75",
+      "label": "Watched 75%",
+      "description": "The number of views that reached three quarters of the video.",
+      "format": "number",
+      "higherIsBetter": true,
+      "levels": ["account", "campaign", "ad_group", "ad"],
+      "sourceField": "video_views_p75",
+      "docUrl": "https://business-api.tiktok.com/portal/docs?id=1738864778664961",
+      "group": "Video",
+      "experimental": true
+    },
+    {
+      "key": "video_views_p100",
+      "label": "Watched 100%",
+      "description": "The number of views that reached the end of the video.",
+      "format": "number",
+      "higherIsBetter": true,
+      "levels": ["account", "campaign", "ad_group", "ad"],
+      "sourceField": "video_views_p100",
+      "docUrl": "https://business-api.tiktok.com/portal/docs?id=1738864778664961",
+      "group": "Video",
+      "experimental": true
+    },
+    {
+      "key": "likes",
+      "label": "Likes",
+      "description": "The number of likes your ad received.",
+      "format": "number",
+      "higherIsBetter": true,
+      "levels": ["account", "campaign", "ad_group", "ad"],
+      "sourceField": "likes",
+      "docUrl": "https://business-api.tiktok.com/portal/docs?id=1738864778664961",
+      "group": "Engagement"
+    },
+    {
+      "key": "comments",
+      "label": "Comments",
+      "description": "The number of comments your ad received.",
+      "format": "number",
+      "higherIsBetter": true,
+      "levels": ["account", "campaign", "ad_group", "ad"],
+      "sourceField": "comments",
+      "docUrl": "https://business-api.tiktok.com/portal/docs?id=1738864778664961",
+      "group": "Engagement"
+    },
+    {
+      "key": "shares",
+      "label": "Shares",
+      "description": "The number of times people shared your ad.",
+      "format": "number",
+      "higherIsBetter": true,
+      "levels": ["account", "campaign", "ad_group", "ad"],
+      "sourceField": "shares",
+      "docUrl": "https://business-api.tiktok.com/portal/docs?id=1738864778664961",
+      "group": "Engagement"
+    },
+    {
+      "key": "follows",
+      "label": "New followers",
+      "description": "The number of new followers credited to your ad.",
+      "format": "number",
+      "higherIsBetter": true,
+      "levels": ["account", "campaign", "ad_group", "ad"],
+      "sourceField": "follows",
+      "docUrl": "https://business-api.tiktok.com/portal/docs?id=1738864778664961",
+      "group": "Engagement"
+    },
+    {
+      "key": "profile_visits",
+      "label": "Profile visits",
+      "description": "The number of visits to your TikTok profile from the ad.",
+      "format": "number",
+      "higherIsBetter": true,
+      "levels": ["account", "campaign", "ad_group", "ad"],
+      "sourceField": "profile_visits",
+      "docUrl": "https://business-api.tiktok.com/portal/docs?id=1738864778664961",
+      "group": "Engagement"
+    }
+  ],
+  "dimensions": [
+    {
+      "key": "stat_time_day",
+      "label": "Day",
+      "description": "The day the activity happened.",
+      "docUrl": "https://business-api.tiktok.com/portal/docs?id=1738864778664961"
+    },
+    {
+      "key": "age",
+      "label": "Age",
+      "description": "The age group of the audience.",
+      "docUrl": "https://business-api.tiktok.com/portal/docs?id=1738864778664961"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "description": "The gender of the audience.",
+      "docUrl": "https://business-api.tiktok.com/portal/docs?id=1738864778664961"
+    },
+    {
+      "key": "country_code",
+      "label": "Country",
+      "description": "The country where the ad was seen.",
+      "docUrl": "https://business-api.tiktok.com/portal/docs?id=1738864778664961"
+    },
+    {
+      "key": "platform",
+      "label": "Platform",
+      "description": "The platform where the ad was shown.",
+      "docUrl": "https://business-api.tiktok.com/portal/docs?id=1738864778664961"
+    },
+    {
+      "key": "placement",
+      "label": "Placement",
+      "description": "The placement where the ad was shown.",
+      "docUrl": "https://business-api.tiktok.com/portal/docs?id=1738864778664961"
+    }
+  ]
+}
